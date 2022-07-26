@@ -5,7 +5,7 @@ const app = express();
 const schema = require('./src/schema/schema');
 const mongoose = require('mongoose');
 app.use(cors());
-mongoose.connect('mongodb+srv://soltane:soltane@dev.ktirfjo.mongodb.net/Microservices?retryWrites=true&w=majority');
+mongoose.connect('DBURI');
 mongoose.connection.once('open', () => {
     console.log('Admin App Connected to the Database');
 })
