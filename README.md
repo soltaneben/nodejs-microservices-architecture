@@ -1,2 +1,8 @@
 # nodejs-microservices-architecture
-A Nodejs Microservice Architecture 
+Description :
+
+
+## Technologies used
+- Node JS Express
+- GraphQL API
+- Docker Containers
