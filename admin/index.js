@@ -5,7 +5,8 @@ const app = express();
 const schema = require('./src/schema/schema');
 const mongoose = require('mongoose');
 app.use(cors());
-mongoose.connect('DBURI');
+require('dotenv').config();
+mongoose.connect(process.env.DB_URI);
 mongoose.connection.once('open', () => {
     console.log('Admin App Connected to the Database');
 })

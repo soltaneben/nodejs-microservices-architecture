@@ -4,8 +4,9 @@ const {graphqlHTTP} = require('express-graphql');
 const app = express();
 const schema = require('./src/schema/schema');
 const mongoose = require('mongoose');
+require('dotenv').config();
 app.use(cors());
-mongoose.connect('DBURI');
+mongoose.connect(process.env.DB_URI);
 mongoose.connection.once('open', () => {
     console.log('Client App Connected to the Database');
 })
